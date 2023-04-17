@@ -2,7 +2,7 @@
 
 ## Project: Ten Thousand 1.0
 
-## Author: mohammad Al-smadi
+## Author: mohammad Al-smadi & Ahmad Eraqi
 
 ## Installation:
 Clone the repository and navigate to the project directory
