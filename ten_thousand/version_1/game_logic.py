@@ -56,3 +56,7 @@ class GameLogic:
         """
         dice = tuple(random.randint(1, 6) for _ in range(num_dice))
         return dice
+    
+
+if __name__=="__main__":
+    print(GameLogic.roll_dice(9))
