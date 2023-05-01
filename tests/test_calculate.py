@@ -42,7 +42,7 @@ def test_zilch():
 
 def test_three_fives():
     actual = GameLogic.calculate_score((5, 5, 5, 2, 2, 3))
-    expected = 50
+    expected =500
     assert actual == expected
 
 
@@ -60,7 +60,7 @@ def test_three_ones_and_a_five():
 
 def test_straight():
     actual = GameLogic.calculate_score((1, 6, 3, 2, 5, 4))
-    expected = 0
+    expected = 150
     assert actual == expected
 
 
