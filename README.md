@@ -1,8 +1,8 @@
-# LAB - Class 06
+# LAB - Class 06, 07, 08 and 09
 
 ## Project: Ten Thousand
 
-## Author: mohammad Al-smadi & Ahmad Eraqi
+## Authors : Mohammad Al-smadi & Ahmad Eraqi
 
 
 ## version: Ten Thousand 1.0
@@ -28,6 +28,22 @@ Overall, version 1 of the Ten Thousand project provides users with a solid found
 * Current round tracking: With the current round displayed, users can keep better track of their progress within each individual game.
 
 Overall, version 2 of the Ten Thousand game offers a more robust and engaging gameplay experience, allowing users to exercise greater control over their score and strategy while keeping track of their progress over multiple rounds. We hope you enjoy playing
+
+## version: Ten Thousand 3.0
+
+* Improved gameplay: With the ability to set aside scoring dice and continue rolling with remaining dice, users can exercise more strategy and control over their gameplay experience.
+
+* Cheat detection: The application can now detect cheating, whether intentional or accidental, such as selecting more dice than available or selecting non-scoring dice as scoring dice.
+
+* Improved rolling: Users can continue rolling with six new dice when all dice have scored in the current turn, adding more excitement and chance to the game.
+
+* Zilch handling: If no scoring dice are rolled, the user will receive no points for the round, and the round will be over.
+
+Overall, version 3 of the Ten Thousand game offers an even more engaging and challenging gameplay experience, with improved control and strategy options for users, cheat detection to ensure fair play, and enhanced rolling mechanics. We hope you enjoy playing!
+
+## version: Ten Thousand 4.0
+AI Bot: A new feature that allows an AI bot named Siri to play the game of Ten Thousand.
+
 ## Installation:
 Clone the repository and navigate to the project directory
 Install the required packages using pip install -r requirements.txt

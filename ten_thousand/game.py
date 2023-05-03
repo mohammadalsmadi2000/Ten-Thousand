@@ -1,9 +1,12 @@
-from game_logic import GameLogic
+from ten_thousand.game_logic import GameLogic
+
 roll_dice = GameLogic.roll_dice
 calculate_score = GameLogic.calculate_score
 validate_keepers = GameLogic.validate_keepers
+
+
 get_scorers = GameLogic.get_scorers
-def play(roller=GameLogic.roll_dice):
+def play(roller=GameLogic.roll_dice,num_rounds=20):
     """Starts the game when called."""
     global roll_dice
     roll_dice = roller
@@ -108,5 +111,9 @@ def bank_points(points, round_num, total):
             end_game(total)
             break
         else:
-            print("Invalid choice, please try again.")              
-play()
+            print("Invalid choice, please try again.")
+
+
+if __name__=="__main__":
+
+    play()

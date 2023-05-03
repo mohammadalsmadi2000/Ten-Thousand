@@ -5,12 +5,14 @@ import sys
 
 def diff(game_play_func, path="", sample=""):
     """runs a given game play function and compares output with contents of given simulation
+
     Args:
         game_play_func (function): function that plays game.
             MUST have key word argument 'roller'
         path (str, optional): File path to a simulation text tile. Defaults to "".
         sample (str, optional): Simulation text to use if no path provided.
             Defaults to "".
+
     Returns:
         list: Reports for any lines that differ
     """

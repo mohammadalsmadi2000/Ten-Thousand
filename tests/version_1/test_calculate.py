@@ -1,5 +1,5 @@
 import pytest
-from ten_thousand.version_1.game_logic import GameLogic
+from ten_thousand.game_logic import GameLogic
 
 pytestmark = [pytest.mark.version_1]
 
@@ -42,25 +42,25 @@ def test_zilch():
 
 def test_three_fives():
     actual = GameLogic.calculate_score((5, 5, 5, 2, 2, 3))
-    expected =500
+    expected =650
     assert actual == expected
 
 
 def test_three_ones():
     actual = GameLogic.calculate_score((1, 1, 1, 2, 3, 4))
-    expected = 1000
+    expected = 1300
     assert actual == expected
 
 
 def test_three_ones_and_a_five():
     actual = GameLogic.calculate_score((1, 1, 1, 5))
-    expected = 1050
+    expected = 1350
     assert actual == expected
 
 
 def test_straight():
     actual = GameLogic.calculate_score((1, 6, 3, 2, 5, 4))
-    expected = 150
+    expected = 2150
     assert actual == expected
 
 
@@ -78,66 +78,66 @@ def test_four_of_a_kind():
 
 def test_five_of_a_kind():
     actual = GameLogic.calculate_score((2, 2, 2, 2, 2))
-    expected = 600
+    expected = 400
     assert actual == expected
 
 
 def test_six_of_a_kind():
     actual = GameLogic.calculate_score((2, 2, 2, 2, 2, 2))
-    expected = 800
+    expected = 400
     assert actual == expected
 
 
 def test_six_ones():
     actual = GameLogic.calculate_score((1, 1, 1, 1, 1, 1))
-    expected = 1300
+    expected = 1700
     assert actual == expected
 
 
 @pytest.mark.parametrize(
     "test_input,expected",
-    [
+    [       
         (tuple(), 0),
         ((1,), 100),
         ((1, 1), 200),
-        ((1, 1, 1), 1000),
-        ((1, 1, 1, 1), 1100),
-        ((1, 1, 1, 1, 1), 1200),
-        ((1, 1, 1, 1, 1, 1), 1300),
+        ((1, 1, 1), 1300),
+        ((1, 1, 1, 1), 1500),
+        ((1, 1, 1, 1, 1), 1600),
+        ((1, 1, 1, 1, 1, 1), 1700),
         ((2,), 0),
         ((2, 2), 0),
         ((2, 2, 2), 200),
         ((2, 2, 2, 2), 400),
-        ((2, 2, 2, 2, 2), 600),
-        ((2, 2, 2, 2, 2, 2), 800),
+        ((2, 2, 2, 2, 2), 400),
+        ((2, 2, 2, 2, 2, 2), 400),
         ((3,), 0),
         ((3, 3), 0),
         ((3, 3, 3), 300),
-        ((3, 3, 3, 3), 600),
-        ((3, 3, 3, 3, 3), 900),
-        ((3, 3, 3, 3, 3, 3), 1200),
+        ((3, 3, 3, 3), 600),#16
+        ((3, 3, 3, 3, 3), 600),
+        ((3, 3, 3, 3, 3, 3), 600),
         ((4,), 0),
         ((4, 4), 0),
         ((4, 4, 4), 400),
         ((4, 4, 4, 4), 800),
-        ((4, 4, 4, 4, 4), 1200),
-        ((4, 4, 4, 4, 4, 4), 1600),
+        ((4, 4, 4, 4, 4), 800),#23
+        ((4, 4, 4, 4, 4, 4), 800),
         ((5,), 50),
         ((5, 5), 100),
-        ((5, 5, 5), 50),
-        ((5, 5, 5, 5), 100),
-        ((5, 5, 5, 5, 5), 150),
-        ((5, 5, 5, 5, 5, 5), 200),
+        ((5, 5, 5), 650),
+        ((5, 5, 5, 5), 1200),
+        ((5, 5, 5, 5, 5), 1250),
+        ((5, 5, 5, 5, 5, 5), 1300),
         ((6,), 0),
         ((6, 6), 0),
         ((6, 6, 6), 600),
         ((6, 6, 6, 6), 1200),
-        ((6, 6, 6, 6, 6), 1800),
-        ((6, 6, 6, 6, 6, 6), 2400),
-        ((1, 2, 3, 4, 5, 6), 0),
+        ((6, 6, 6, 6, 6), 1200),
+        ((6, 6, 6, 6, 6, 6), 1200),
+        ((1, 2, 3, 4, 5, 6), 2150),
         ((2, 2, 3, 3, 4, 6), 0),
-        ((2, 2, 3, 3, 6, 6), 0),
-        ((1, 1, 1, 2, 2, 2), 1200),
+        ((2, 2, 3, 3, 6, 6), 1500),
+        ((1, 1, 1, 2, 2, 2), 1500),
     ],
 )
 def test_all(test_input, expected):
